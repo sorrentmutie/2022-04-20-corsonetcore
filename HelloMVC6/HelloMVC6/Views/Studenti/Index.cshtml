@@ -1,0 +1,53 @@
+﻿@model IEnumerable<StudentiIndexViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeCompleto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MediaEsami)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Matricola)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeCompleto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MediaEsami)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Matricola)
+            </td>
+            <td>
+                <a class="btn-primary btn-warning" asp-action="Edit" asp-route-id="@item.Id">Modifica</a>
+                <a class="btn-primary btn-info" asp-action="Details" asp-route-id="@item.Id">Dettagli</a>
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

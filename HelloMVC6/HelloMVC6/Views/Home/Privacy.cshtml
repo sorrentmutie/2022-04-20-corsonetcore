@@ -1,0 +1,21 @@
+﻿@model int
+@inject IStudentsService service
+
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Ultimo id generato @Model</p>
+
+
+<cache expires-after="@TimeSpan.FromSeconds(10)">
+    Current Time Inside Cache Tag Helper: @DateTime.Now
+    <p>Ultimo id generato: @service.UltimoIdGenerato()</p>
+    @await Component.InvokeAsync("My",42)
+</cache>
+
+
+@foreach(var studente in service.GetStudentiIndexViewModel()){
+    <p>@studente.NomeCompleto</p>
+}

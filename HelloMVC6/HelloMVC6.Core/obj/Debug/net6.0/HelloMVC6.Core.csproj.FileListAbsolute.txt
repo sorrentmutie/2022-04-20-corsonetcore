@@ -1,0 +1,12 @@
+E:\corsi\netcore\HelloMVC6\HelloMVC6.Core\bin\Debug\net6.0\HelloMVC6.Core.deps.json
+E:\corsi\netcore\HelloMVC6\HelloMVC6.Core\bin\Debug\net6.0\HelloMVC6.Core.dll
+E:\corsi\netcore\HelloMVC6\HelloMVC6.Core\bin\Debug\net6.0\HelloMVC6.Core.pdb
+E:\corsi\netcore\HelloMVC6\HelloMVC6.Core\obj\Debug\net6.0\HelloMVC6.Core.csproj.AssemblyReference.cache
+E:\corsi\netcore\HelloMVC6\HelloMVC6.Core\obj\Debug\net6.0\HelloMVC6.Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\corsi\netcore\HelloMVC6\HelloMVC6.Core\obj\Debug\net6.0\HelloMVC6.Core.AssemblyInfoInputs.cache
+E:\corsi\netcore\HelloMVC6\HelloMVC6.Core\obj\Debug\net6.0\HelloMVC6.Core.AssemblyInfo.cs
+E:\corsi\netcore\HelloMVC6\HelloMVC6.Core\obj\Debug\net6.0\HelloMVC6.Core.csproj.CoreCompileInputs.cache
+E:\corsi\netcore\HelloMVC6\HelloMVC6.Core\obj\Debug\net6.0\HelloMVC6.Core.dll
+E:\corsi\netcore\HelloMVC6\HelloMVC6.Core\obj\Debug\net6.0\refint\HelloMVC6.Core.dll
+E:\corsi\netcore\HelloMVC6\HelloMVC6.Core\obj\Debug\net6.0\HelloMVC6.Core.pdb
+E:\corsi\netcore\HelloMVC6\HelloMVC6.Core\obj\Debug\net6.0\ref\HelloMVC6.Core.dll

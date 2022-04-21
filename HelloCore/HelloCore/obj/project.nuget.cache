@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "gMPp4u8qTK5FudVEk6sYhB76cmeUsWBeOPLFCNztloQLquedsRPEAYkB2rNtAUqqEenSmQrc52wrHOSYyVN0TQ==",
+  "success": true,
+  "projectFilePath": "E:\\corsi\\netcore\\HelloCore\\HelloCore\\HelloCore.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\salvatore\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.16\\microsoft.netcore.app.host.win-x64.5.0.16.nupkg.sha512"
+  ],
+  "logs": []
+}
