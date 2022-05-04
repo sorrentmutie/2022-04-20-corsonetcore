@@ -1,0 +1,58 @@
+﻿@page "/miaprimapagina"
+@inject IEventi servizioEventi
+
+<h3>Mia Prima Pagina</h3>
+<button class="btn btn-success" @onclick="CreaEvento">Crea Evento</button>
+
+@if(EventoCorrente == null)
+{
+    <ListaEventi Eventi="EventiFuturi" Titolo="Eventi futuri" OnElimina="EliminaEvento"
+            OnModifica="ModificaEvento"></ListaEventi>
+} else
+{
+    <DettaglioEvento EventoCorrente="EventoCorrente" OnSalva="Salva" OnAnnulla="Annulla"></DettaglioEvento>
+}
+
+@code {
+    public List<Evento> EventiFuturi { get; set; } = new List<Evento>();
+    public Evento EventoCorrente;
+
+    protected override void OnInitialized()
+    {
+        EventiFuturi = servizioEventi.EstraiEventi();
+    }
+
+    private void Annulla()
+    {
+        EventoCorrente = null;
+    }
+
+    private void ModificaEvento(Evento evento)
+    {
+        EventoCorrente = evento;
+    }
+
+    private void Salva(Evento evento)
+    {
+        if(evento.Id == 0)
+        {
+            servizioEventi.Aggiungi(evento);
+        } else
+        {
+            servizioEventi.Modifica(evento);
+        }
+        EventoCorrente = null;
+        EventiFuturi = servizioEventi.EstraiEventi();
+    }
+
+    private void CreaEvento()
+    {
+        EventoCorrente = new Evento { Data= DateTime.Today};
+    }
+
+    private void EliminaEvento(Evento evento)
+    {
+        servizioEventi.Elimina(evento); 
+        EventiFuturi = servizioEventi.EstraiEventi();
+    }
+}

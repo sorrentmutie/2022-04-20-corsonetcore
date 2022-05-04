@@ -1,0 +1,20 @@
+﻿@page "/"
+@inject IEventi servizioEventi
+
+<PageTitle>Index</PageTitle>
+<h1>Prima demo Blazor</h1>
+<MioPrimoComponente ClassiContenuto="text text-danger" ClassiContenuto2="text text-success">
+    <Contenuto>
+        <p>Mio input</p>
+    </Contenuto>
+    <Contenuto2>
+        <p>Mio secondo contenuto</p>
+    </Contenuto2>
+</MioPrimoComponente>
+
+
+
+@*<ListaEventi NascondiElimina="true" Eventi="@servizioEventi.EstraiEventiPassati()" Titolo="Eventi Passati" ></ListaEventi>
+*@
+@code {
+}

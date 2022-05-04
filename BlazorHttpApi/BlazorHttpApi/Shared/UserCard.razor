@@ -1,0 +1,11 @@
+﻿<div class="card text-white bg-primary mb-3 col-md-3">
+    <div class="card-header">@user.FirstName @user.LastName</div>
+    <div class="card-body">
+        <h4 class="card-title">@user.Email</h4>
+        <img src="@user.Avatar" />
+    </div>
+</div>
+
+@code {
+    [Parameter] public Person user { get; set; }
+}

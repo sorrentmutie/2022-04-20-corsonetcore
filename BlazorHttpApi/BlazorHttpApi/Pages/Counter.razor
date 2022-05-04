@@ -1,0 +1,62 @@
+﻿@using BlazorHttpApi.Shared
+@inject IReqResService service
+@inject IJSRuntime jsRuntime;
+@page "/counter"
+
+
+<button @onclick="ApriModale" class="btn btn-success">Apri Modale</button>
+<MyModal Id="@Id" Titolo="Mio titolo" OnSalva="ChiudiModale" OnChiudi="ChiudiModale">
+    <Corpo>
+        <Details TItem="ReqResRequest" ItemCorrente="Utente" OnAnnulla="Annulla" OnSalva="Salva">
+            <CampiDelForm>
+                <MyInputText Id="nome" Label="Nome" @bind-Value="Utente.name"></MyInputText>
+                <MyInputText Id="job" Label="Lavoro" @bind-Value="Utente.job"></MyInputText>
+            </CampiDelForm>
+        </Details>
+    </Corpo>
+</MyModal>
+
+
+
+
+
+
+@if (Response != null)
+{
+    @Response.createdAt
+}
+
+@code {
+    private ReqResRequest Utente = new ReqResRequest();
+    private ReqResCreateResponse Response = new ReqResCreateResponse();
+    private string Id { get; set; } = "mioId";
+    private MiaPrimoInterop miaPrimoInterop;
+
+    protected override void OnInitialized()
+    {
+        miaPrimoInterop = new MiaPrimoInterop(jsRuntime);
+    }
+
+    private async Task Salva(ReqResRequest reqResRequest)
+    {
+        Response = await service.PostNewUser(reqResRequest);
+        Utente = new ReqResRequest();
+        await ChiudiModale();
+    }
+
+    private async Task Annulla()
+    {
+        Utente = new ReqResRequest();
+         await ChiudiModale();
+    }
+
+    private async Task ApriModale()
+    {
+        await miaPrimoInterop.ApriModale(Id);
+    }
+
+    private async Task ChiudiModale()
+    {
+        await miaPrimoInterop.ChiudiModale();
+    }
+}

@@ -1,0 +1,29 @@
+﻿@inject IJSRuntime jsRuntime
+
+<div id="@Id" class="ct-chart"></div>
+
+@code {
+    [Parameter] public int Width { get; set; } = 300;
+    [Parameter] public int Height { get; set; } = 200;
+    [Parameter] public string Id { get; set; } ="";
+    [Parameter] public ChartType Type { get; set; } = ChartType.Line;
+    [Parameter] public ChartData Data { get; set; } = new ChartData();
+
+    private MiaPrimoInterop miaPrimoInterop;
+    protected override void OnInitialized()
+    {
+        miaPrimoInterop = new MiaPrimoInterop(jsRuntime);
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if(Type == ChartType.Line)
+        {
+            await miaPrimoInterop.CreaChart(Id, Width, Height, Data);
+        } else
+        {
+            await miaPrimoInterop.CreaBarChart(Id, Width, Height, Data);            
+        }
+
+    }
+}

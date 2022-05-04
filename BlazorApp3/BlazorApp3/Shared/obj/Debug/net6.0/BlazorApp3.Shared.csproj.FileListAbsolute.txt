@@ -1,0 +1,12 @@
+E:\corsi\netcore\BlazorApp3\BlazorApp3\Shared\bin\Debug\net6.0\BlazorApp3.Shared.deps.json
+E:\corsi\netcore\BlazorApp3\BlazorApp3\Shared\bin\Debug\net6.0\BlazorApp3.Shared.dll
+E:\corsi\netcore\BlazorApp3\BlazorApp3\Shared\bin\Debug\net6.0\BlazorApp3.Shared.pdb
+E:\corsi\netcore\BlazorApp3\BlazorApp3\Shared\obj\Debug\net6.0\BlazorApp3.Shared.csproj.AssemblyReference.cache
+E:\corsi\netcore\BlazorApp3\BlazorApp3\Shared\obj\Debug\net6.0\BlazorApp3.Shared.GeneratedMSBuildEditorConfig.editorconfig
+E:\corsi\netcore\BlazorApp3\BlazorApp3\Shared\obj\Debug\net6.0\BlazorApp3.Shared.AssemblyInfoInputs.cache
+E:\corsi\netcore\BlazorApp3\BlazorApp3\Shared\obj\Debug\net6.0\BlazorApp3.Shared.AssemblyInfo.cs
+E:\corsi\netcore\BlazorApp3\BlazorApp3\Shared\obj\Debug\net6.0\BlazorApp3.Shared.csproj.CoreCompileInputs.cache
+E:\corsi\netcore\BlazorApp3\BlazorApp3\Shared\obj\Debug\net6.0\BlazorApp3.Shared.dll
+E:\corsi\netcore\BlazorApp3\BlazorApp3\Shared\obj\Debug\net6.0\refint\BlazorApp3.Shared.dll
+E:\corsi\netcore\BlazorApp3\BlazorApp3\Shared\obj\Debug\net6.0\BlazorApp3.Shared.pdb
+E:\corsi\netcore\BlazorApp3\BlazorApp3\Shared\obj\Debug\net6.0\ref\BlazorApp3.Shared.dll

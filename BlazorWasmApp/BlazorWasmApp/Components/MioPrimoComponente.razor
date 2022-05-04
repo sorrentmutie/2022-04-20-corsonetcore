@@ -1,0 +1,12 @@
+﻿
+<h3 class="@ClassiContenuto">Mio Primo Componente</h3>
+@Contenuto
+<h4 class="@ClassiContenuto2">Secondo contenuto</h4>
+@Contenuto2
+
+@code {
+    [Parameter] public RenderFragment Contenuto { get; set; }
+    [Parameter] public RenderFragment Contenuto2 { get; set; }
+    [Parameter] public string ClassiContenuto { get; set; }
+    [Parameter] public string ClassiContenuto2 { get; set; }
+}

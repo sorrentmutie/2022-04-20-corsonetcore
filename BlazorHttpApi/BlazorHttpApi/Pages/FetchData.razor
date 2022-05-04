@@ -1,0 +1,61 @@
+﻿@page "/fetchdata"
+@inject IReqResService httpService
+
+<button class="btn btn-success" @onclick="EseguiChiamata">OK</button>
+<button class="btn btn-danger" @onclick="AnnullaChiamata">Annulla</button>
+<button class="btn btn-warning" @onclick="CreaUtente">Crea</button>
+
+
+@Message
+
+@if(responseCreate != null)
+{
+  <p class="text-black text-danger">@responseCreate.createdAt</p> 
+  <p>@responseCreate.id</p>
+  <p>@responseCreate.name</p>
+}
+
+<div class="row">
+    @if (response?.data?.Count > 0)
+    {
+        foreach (var user in response.data)
+        {
+            <UserCard user="user"></UserCard>
+        }
+    }
+</div>
+
+
+
+
+
+@code {
+    private ReqResResponse response = new ReqResResponse();
+    private string Message = string.Empty;
+    private ReqResCreateResponse responseCreate = new ReqResCreateResponse();
+
+    public async Task EseguiChiamata()
+    {
+        response = await httpService.GetResponse();
+    }
+
+    public void AnnullaChiamata()
+    {
+        httpService.CancelRequest();
+        Message = "La richiesta è stata cancellata";
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await EseguiChiamata();
+    }
+
+    private async Task CreaUtente()
+    {
+        responseCreate = await httpService.PostNewUser(new ReqResRequest
+            {
+                name = "Mario Rossi",
+                job = "developer"
+            });
+    }
+}

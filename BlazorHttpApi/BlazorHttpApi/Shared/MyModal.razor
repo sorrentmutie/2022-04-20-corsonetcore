@@ -1,0 +1,27 @@
+﻿<div class="modal" tabindex="-1" role="dialog" id="@Id">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">@Titolo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                @Corpo
+            </div>
+            <div class="modal-footer">
+                <button type="button" @onclick="OnSalva" class="btn btn-primary">Salva</button>
+                <button type="button" @onclick="OnChiudi" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter] public string Id { get; set; }
+    [Parameter] public string Titolo { get; set; }
+    [Parameter] public RenderFragment Corpo { get; set; }
+    [Parameter] public EventCallback OnSalva { get; set; }
+    [Parameter] public EventCallback OnChiudi { get; set; }
+}

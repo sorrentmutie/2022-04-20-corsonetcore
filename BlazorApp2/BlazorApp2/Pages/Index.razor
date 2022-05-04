@@ -1,0 +1,32 @@
+﻿@page "/"
+@using Blazored.LocalStorage
+@inject ILocalStorageService localStorage;
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world! @LastLogin</h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+
+@code {
+    private string LastLogin = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        if(await localStorage.ContainKeyAsync("lastLoginDate")){
+            LastLogin = await localStorage.GetItemAsStringAsync("lastLoginDate");
+        }
+
+        await localStorage.SetItemAsync<Person>("person", new Person
+            {
+                Id = 12,
+                Name = "Mario Rossi"
+            });
+
+        await localStorage.SetItemAsync("lastLoginDate", DateTime.Now.ToString());
+        // await localStorage.SetItemAsync("name", "John Smith");
+        // var name = await localStorage.GetItemAsync<string>("name");
+    }
+}

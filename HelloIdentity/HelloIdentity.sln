@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloIdentity", "HelloIdentity\HelloIdentity.csproj", "{AB1DBD13-2D5C-4F42-8F23-E1A3FAB9DDDD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB1DBD13-2D5C-4F42-8F23-E1A3FAB9DDDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB1DBD13-2D5C-4F42-8F23-E1A3FAB9DDDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB1DBD13-2D5C-4F42-8F23-E1A3FAB9DDDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB1DBD13-2D5C-4F42-8F23-E1A3FAB9DDDD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2F78F99E-CE7C-4623-B8D8-7BBD1EA3633A}
+	EndGlobalSection
+EndGlobal

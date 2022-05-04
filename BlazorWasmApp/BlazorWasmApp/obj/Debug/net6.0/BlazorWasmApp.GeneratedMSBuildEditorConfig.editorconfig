@@ -1,0 +1,71 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = browser
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = true
+build_property.IncludeAllContentForSelfExtract = 
+build_property.RootNamespace = BlazorWasmApp
+build_property.RootNamespace = BlazorWasmApp
+build_property.ProjectDir = E:\corsi\netcore\BlazorWasmApp\BlazorWasmApp\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\corsi\netcore\BlazorWasmApp\BlazorWasmApp
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/corsi/netcore/BlazorWasmApp/BlazorWasmApp/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/corsi/netcore/BlazorWasmApp/BlazorWasmApp/Components/DettaglioEvento.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xEZXR0YWdsaW9FdmVudG8ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/corsi/netcore/BlazorWasmApp/BlazorWasmApp/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/corsi/netcore/BlazorWasmApp/BlazorWasmApp/Pages/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/corsi/netcore/BlazorWasmApp/BlazorWasmApp/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/corsi/netcore/BlazorWasmApp/BlazorWasmApp/Pages/MiaPrimaPagina.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWlhUHJpbWFQYWdpbmEucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/corsi/netcore/BlazorWasmApp/BlazorWasmApp/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/corsi/netcore/BlazorWasmApp/BlazorWasmApp/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/corsi/netcore/BlazorWasmApp/BlazorWasmApp/Components/ListaEventi.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMaXN0YUV2ZW50aS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-zio4vtof2v
+
+[E:/corsi/netcore/BlazorWasmApp/BlazorWasmApp/Components/MioPrimoComponente.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNaW9Qcmltb0NvbXBvbmVudGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-xjqgklipaq
+
+[E:/corsi/netcore/BlazorWasmApp/BlazorWasmApp/Components/UltimoEvento.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xVbHRpbW9FdmVudG8ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-o86goxy55w
+
+[E:/corsi/netcore/BlazorWasmApp/BlazorWasmApp/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-jd7xkntopg
+
+[E:/corsi/netcore/BlazorWasmApp/BlazorWasmApp/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-udmav2uv3f

@@ -1,0 +1,66 @@
+﻿<h3>@Titolo</h3>
+
+<table class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Data</th>
+            <th>Località</th>
+            @if (!NascondiElimina)
+            {
+                <th></th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var evento in Eventi)
+        {
+
+            <tr>
+                <td>@evento.Id</td>
+                <td>@evento.Nome</td>
+                <td>@evento.Data.ToShortDateString()</td>
+                <td>@evento.Localita</td>
+                @if (!NascondiElimina)
+                {
+                    <td>
+                        <button class="btn btn-danger @miaclasse" @onclick="() => OnElimina.InvokeAsync(evento)">Elimina</button>
+                        <button class="btn btn-danger @miaclasse" @onclick="() => OnModifica.InvokeAsync(evento)">Modifica</button>
+                    </td>
+                }
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+<button @onclick="NascondiBottoni">Nascondi Bottoni</button>
+
+
+@code {
+    [Parameter] public List<Evento> Eventi { get; set; } = new List<Evento>();
+    [Parameter] public string Titolo { get; set; }
+    [Parameter] public EventCallback<Evento> OnElimina { get; set; }
+    [Parameter] public EventCallback<Evento> OnModifica { get; set; }
+    [Parameter] public bool NascondiElimina { get; set; }
+
+    private bool mioBooleano = false;
+    private string miaclasse = "";
+
+    private void NascondiBottoni()
+    {
+        miaclasse = "hidden";
+        mioBooleano = false;
+    }
+
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
+    }
+
+    //private void EliminaEvento(Evento evento)
+    //{
+    //    Eventi.Remove(evento);
+    //}
+}

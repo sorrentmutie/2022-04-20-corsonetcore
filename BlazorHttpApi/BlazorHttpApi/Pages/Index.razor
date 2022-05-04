@@ -1,0 +1,78 @@
+﻿@page "/"
+@inject IJSRuntime jsRuntime
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+<button @onclick="InvocaJavaScript">Invoca JavaScript</button>
+<button @onclick="InvocaJavaScript2">Invoca JavaScript 2</button>
+<button @onclick="InvocaJavaScriptObject">Invoca JavaScript Object</button>
+@Risultato
+
+<button @onclick="ApriModale"  class="btn btn-success">Apri Modale</button>
+<MyModal Id="@Id" Titolo="Mio titolo" OnSalva="ChiudiModale" OnChiudi="ChiudiModale">
+    <Corpo>
+        <p>Questo è un esempio di corpo</p>
+    </Corpo>
+</MyModal>
+
+<MyChart Id="primo" Width="400" Height="300" Data="data"></MyChart>
+<MyChart Type="ChartType.Bar" Id="secondo" Data="data" Width="200" Height="200"></MyChart>
+
+
+@code {
+
+    private int Risultato { get; set; }
+    private MiaPrimoInterop miaPrimaInterop;
+    private string Id { get; set; } = "mioId";
+
+    private static ChartData data = new ChartData
+        {
+            Labels = new List<string> { "a", "b", "c" },
+            Series = new List<ChartValues>
+            {
+                new ChartValues { Values = {1,2,3,5}}
+            }
+        };
+
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        miaPrimaInterop = new MiaPrimoInterop(jsRuntime);
+    }
+
+    private async Task InvocaJavaScript()
+    {
+        Risultato = await miaPrimaInterop.MiaTerzaFunzione(12, 13);
+    }
+
+    private async Task InvocaJavaScript2()
+    {
+        await miaPrimaInterop.MiaQuartaFunzione("ciao");
+    }
+
+    private async Task InvocaJavaScriptObject()
+    {
+        await miaPrimaInterop.MiaQuintaFunzione("Mario");
+    }
+
+
+    [JSInvokable]
+    public static Task<int[]> RestituisciArrayAsync()
+    {
+        return Task.FromResult(new int[] { 1, 4, 12, 34 });
+    }
+
+    private async Task ApriModale()
+    {
+        await miaPrimaInterop.ApriModale(Id);
+    }
+
+    private async Task ChiudiModale()
+    {
+        await miaPrimaInterop.ChiudiModale();
+    }
+
+}
+

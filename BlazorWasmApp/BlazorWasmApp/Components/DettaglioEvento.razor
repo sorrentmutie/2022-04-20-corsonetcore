@@ -1,0 +1,31 @@
+﻿<h3>Dettaglio Evento</h3>
+<EditForm Model="EventoCorrente" OnValidSubmit="() => OnSalva.InvokeAsync(EventoCorrente)">
+    <DataAnnotationsValidator></DataAnnotationsValidator>
+    <div class="form-group">
+        <label for="nome">Nome</label>
+        <InputText id="nome" @bind-Value="EventoCorrente.Nome" class="form-control"></InputText>
+        <ValidationMessage For="@(() => EventoCorrente.Nome)"></ValidationMessage>
+    </div>
+
+    <div class="form-group">
+        <label for="localita">Località</label>
+        <InputText id="localita" @bind-Value="EventoCorrente.Localita" class="form-control"></InputText>
+        <ValidationMessage For="@(() => EventoCorrente.Localita)"></ValidationMessage>
+    </div>
+
+
+    <div class="form-group">
+        <label for="data">Data</label>
+        <InputDate id="data" @bind-Value="EventoCorrente.Data" class="form-control"></InputDate>
+    </div>
+
+
+    <button class="btn btn-info" type="submit">OK</button>
+    <button class="btn btn-info" type="button" @onclick="() => OnAnnulla.InvokeAsync()">Annulla</button>
+</EditForm>
+
+@code {
+    [Parameter] public Evento EventoCorrente { get; set; }
+    [Parameter] public EventCallback OnAnnulla { get; set; }
+    [Parameter] public EventCallback<Evento> OnSalva { get; set; }
+}

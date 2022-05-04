@@ -1,0 +1,13 @@
+﻿@inject IEventi eventiService
+<h3>Prossimo Evento: @evento.Nome</h3>
+<h4>Data: @evento.Data</h4>
+<h5>Località: @evento.Localita</h5>
+@code {
+    private Evento evento = new Evento();
+
+    protected override void OnInitialized()
+    {
+        evento = eventiService.EstraiUltimoEvento();
+    }
+
+}
